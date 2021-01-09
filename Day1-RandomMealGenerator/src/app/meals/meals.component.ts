@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal } from "../meal";
+import { MEALS } from "../mock-meal";
 
 @Component({
   selector: 'app-meals',
@@ -8,15 +9,8 @@ import { Meal } from "../meal";
 })
 export class MealsComponent implements OnInit {
 
-  meal: Meal = {
-    id: 1,
-    name: 'English Breakfast',
-    content: "Lorem ipsum",
-    image: "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg",
-    link: "https://www.youtube.com/watch?v=FXjYU2Ensck&feature=emb_logo",
-    category: 'Beef',
-    area: 'England',
-  };
+  meals = MEALS;
+  selectedMeal: Meal;
 
   ngOnInit(): void {
 
@@ -24,4 +18,7 @@ export class MealsComponent implements OnInit {
 
   constructor() { }
 
+  onSelect(meal: Meal): void {
+    this.selectedMeal = meal;
+  }
 }

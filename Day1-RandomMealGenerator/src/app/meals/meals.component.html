@@ -1,7 +1,20 @@
-<h2>{{meal.name | uppercase}} Details</h2>
-<div><span>id: </span>{{meal.id}}</div>
-<div>
-  <label>meal:
-    <input [(ngModel)]="meal.name" placeholder="name"/>
-  </label>
+<h2>Feeling hungry?</h2>
+<ul class="meals">
+  <li *ngFor="let meal of meals"
+    [class.selected]="meal === selectedMeal"
+    (click)="onSelect(meal)">
+    <span class="badge">{{meal.id}}</span> {{meal.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedMeal">
+
+  <h2>{{selectedMeal.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedMeal.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedMeal.name" placeholder="name"/>
+    </label>
+  </div>
+
 </div>
