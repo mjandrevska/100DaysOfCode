@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { Meal } from "../meal";
-import { MEALS } from "../mock-meal";
+import { Meal } from '../meal';
+import { MEALS } from '../mock-meal';
 
 @Component({
   selector: 'app-meals',
   templateUrl: './meals.component.html',
-  styleUrls: ['./meals.component.css']
+  styleUrls: ['./meals.component.css'],
 })
 export class MealsComponent implements OnInit {
 
   meals = MEALS;
   selectedMeal: Meal;
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  constructor() {
+    // selectedMeal?: any;
   }
-
-  constructor() { }
 
   onSelect(meal: Meal): void {
     this.selectedMeal = meal;

@@ -1,1 +1,9 @@
-<p>meal-details works!</p>
+<div *ngIf="meal">
+  <h2>{{meal.name | uppercase}} Details</h2>
+  <div><span>id: {{meal.id}}</span></div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="meal.name" placeholder="meal" />
+    </label>
+  </div>
+</div>
