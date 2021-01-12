@@ -9,3 +9,10 @@ Most of the ideas are borrowed from: https://www.florin-pop.com/blog/2019/09/100
 
 # Rules
 Although the official rule is that you have to complete 1 project per day and spend at least 1 hour programming, I will focus on quality over quantity and  extend the time for completing some of the more complex projects or take more time for learning new technologies.
+
+# Projects
+1. Project 1 (folder - Day1-RandomMealGenerator)- Random Meal Generator - A simple project for generating random meals with more information about the meals by clicking on a button. Technologies: Angular
+
+2. Project 2 (folder - day2) - Testimonials - A project for displaying testimonials by clients. Technologies: React-Create-App and Chakra UI
+
+
