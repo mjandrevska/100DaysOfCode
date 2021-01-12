@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal } from '../meal';
+import { MealService } from '../meal.service';
+import { MessageService } from '../message.service';
 import { MEALS } from '../mock-meal';
 
 @Component({
@@ -9,16 +11,22 @@ import { MEALS } from '../mock-meal';
 })
 export class MealsComponent implements OnInit {
 
-  meals = MEALS;
   selectedMeal: Meal;
 
-  ngOnInit(): void {}
+  meals: Meal[];
 
-  constructor() {
-    // selectedMeal?: any;
+  constructor(private mealService: MealService, private messageService: MessageService) { }
+
+  ngOnInit() {
+    this.getMeals();
   }
 
   onSelect(meal: Meal): void {
     this.selectedMeal = meal;
+    this.messageService.add(`MealsComponent: Selected meal id=${meal.id}`);
+  }
+
+  getHeroes(): void {
+    this.mealService.getMeals().subscribe(meals => this.meals = this.meals);
   }
 }
