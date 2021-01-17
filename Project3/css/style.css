@@ -19,7 +19,7 @@ body {
 
 .section-container {
   min-height: calc(100vh - 120px);
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 
 .site-title {
