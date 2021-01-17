@@ -44,10 +44,6 @@ body {
   margin-bottom: 36px;
 }
 
-.img-container {
-  margin-right: 150px;
-}
-
 .section-description {
   font-family: "Mono-Regular";
   font-weight: 400;
@@ -85,30 +81,23 @@ body {
 
 @media (max-width: 576px) {
   .site-title {
-    margin: 0;
+    margin: 10px;
   }
   .section-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 0;
+    padding-top: 0;
   }
   .section-title {
     font-size: 48px;
     line-height: 71px;
-    padding: 10px;
   }
   .section-description {
     font-size: 18px;
     line-height: 26.6px;
-    padding: 10px;
   }
   .btn-to-home {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 10px;
-  }
-  .img-container {
-    margin-right: 0;
   }
 }
 
